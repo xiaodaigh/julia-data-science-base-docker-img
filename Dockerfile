@@ -4,6 +4,7 @@ COPY install_packagecompilerx.jl .
 
 RUN apt-get update && \
 	apt-get install build-essential -y && \
+	apt-get install qt5-default -y && \
 	julia install_packagecompilerx.jl && \
 	apt-get remove build-essential -y && \
 	apt-get autoremove -y && \
