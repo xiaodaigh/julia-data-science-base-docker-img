@@ -1,1 +1,1 @@
-docker build -t zj/julia-try ./
+docker build --no-cache -t zj/julia-try ./

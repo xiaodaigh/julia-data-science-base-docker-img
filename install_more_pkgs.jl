@@ -1,12 +1,12 @@
 using Pkg
 #pkg"add WebIO TableView"
 
-pkg"add https://github.com/xiaodaigh/FstFileFormat.jl FastGroupBy SortingLab  ParquetFiles FileIO Missings CategoricalArrays Tables DataConvenience"
+pkg"add https://github.com/xiaodaigh/FstFileFormat.jl FastGroupBy SortingLab ParquetFiles FileIO Missings CategoricalArrays FreqTables Tables"
+#pkg"add DataConvenience"
 
 #using WebIO
 
 #WebIO.install_jupyter_nbextension(); WebIO.install_jupyter_labextension()
-
 
 using PackageCompilerX
 create_sysimage(
@@ -20,6 +20,5 @@ create_sysimage(
  	:CategoricalArrays,
  	:FreqTables,
  	:Tables,
- 	:DataConvenience
+# 	:DataConvenience
  	], replace_default = true)
-

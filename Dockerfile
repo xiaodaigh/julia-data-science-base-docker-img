@@ -47,8 +47,8 @@ USER $NB_UID
 
 # R packages including IRKernel which gets installed globally.
 # RUN conda install --quiet --yes -c bfurneaux r-disk.frame
-# RUN conda install --quiet --yes \
-#     'r-base=3.6.1' \
+RUN conda install --quiet --yes \
+     'r-base=3.6.1' && \
 #     'r-caret=6.0*' \
 #     'r-crayon=1.3*' \
 #     'r-devtools=2.1*' \
@@ -69,9 +69,9 @@ USER $NB_UID
 #     'r-tidyverse=1.2*' \
 #     'rpy2=2.9*' \
 #     && \
-#     conda clean --all -f -y && \
-#     fix-permissions $CONDA_DIR && \
-#     fix-permissions /home/$NB_USER
+     conda clean --all -f -y && \
+     fix-permissions $CONDA_DIR && \
+     fix-permissions /home/$NB_USER
 
 # Add Julia packages. Only add HDF5 if this is not a test-only build since
 # it takes roughly half the entire build time of all of the images on Travis
