@@ -48,7 +48,7 @@ USER $NB_UID
 # R packages including IRKernel which gets installed globally.
 # RUN conda install --quiet --yes -c bfurneaux r-disk.frame
 RUN conda install --quiet --yes \
-     'r-base=3.6.1' && \
+     'r-base=3.6.1' \
 #     'r-caret=6.0*' \
 #     'r-crayon=1.3*' \
 #     'r-devtools=2.1*' \
@@ -56,7 +56,7 @@ RUN conda install --quiet --yes \
 #     'r-hexbin=1.27*' \
 #     'r-htmltools=0.3*' \
 #     'r-htmlwidgets=1.3*' \
-#     'r-irkernel=1.0*' \
+     'r-irkernel=1.0*' && \
 #     'r-nycflights13=1.0*' \
 #     'r-plyr=1.8*' \
 #     'r-randomforest=4.6*' \
@@ -89,31 +89,23 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
     rm -rf $HOME/.local && \
     fix-permissions $JULIA_PKGDIR $CONDA_DIR/share/jupyter
 
-COPY install_packagecompilerx.jl .
+COPY add-compiled.jl .
+COPY add-non-compiled.jl .
+COPY clean-up.jl .
 
 USER root 
 
 RUN sudo apt-get update && \
 	sudo apt-get install build-essential -y && \
 	sudo apt-get install qt5-default -y && \
-	julia install_packagecompilerx.jl 
-	# && \
-	# sudo apt-get remove build-essential -y && \
-	# sudo apt-get autoremove -y && \
-	# sudo apt-get clean -y
+	julia add-compiled.jl && \
+	julia add-non-compiled.jl && \
+	julia clean-up.jl && \
+	sudo apt-get remove build-essential -y && \
+	sudo apt-get autoremove -y && \
+	sudo apt-get clean -y && \ 
+	julia precompile.jl && \
+	rm -rf $HOME/.local && \
+    fix-permissions $JULIA_PKGDIR && \
+    fix-permissions $JULIA_PKGDIR $CONDA_DIR/share/jupyter
 
-COPY install_more_pkgs.jl .
-RUN julia install_more_pkgs.jl
-
-
-COPY install_plots.jl .
-RUN julia install_plots.jl
-
-COPY precompile.jl .
-RUN julia precompile.jl
-
-# seems to be needed to to get all packages working
-RUN fix-permissions $JULIA_PKGDIR
-RUN fix-permissions $JULIA_PKGDIR $CONDA_DIR/share/jupyter
-
-#CMD ["julia"]
