@@ -1,1 +1,1 @@
-docker build --squash -t zj/julia-try ./
+docker build --squash -t zj/julia-try ./ 

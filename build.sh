@@ -1,1 +1,1 @@
-docker build --rm=false -t zj/julia-try ./
+docker build --build-arg DISPLAY=$DISPLAY -t zj/julia-try ./ > log.txt
