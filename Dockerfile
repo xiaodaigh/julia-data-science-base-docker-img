@@ -25,7 +25,7 @@ RUN apt-get update && \
 # install Julia packages in /opt/julia instead of $HOME
 ENV JULIA_DEPOT_PATH=/opt/julia
 ENV JULIA_PKGDIR=/opt/julia
-ENV JULIA_VERSION=1.3.0
+ENV JULIA_VERSION=1.3.1
 
 RUN mkdir /opt/julia-${JULIA_VERSION} && \
     cd /tmp && \
@@ -94,20 +94,20 @@ USER root
 ##########################################################################
 # begin: For testing
 ##########################################################################
-RUN sudo apt-get update && \
-	sudo apt-get install build-essential -y && \
-	sudo apt-get install qt5-default -y
+# RUN sudo apt-get update && \
+# 	sudo apt-get install build-essential -y && \
+# 	sudo apt-get install qt5-default -y
 
-RUN sudo apt-get install x11-apps xauth -y
+# RUN sudo apt-get install x11-apps xauth -y
 
-COPY add-compiled.jl .
-RUN julia add-compiled.jl
+# COPY add-compiled.jl .
+# RUN julia add-compiled.jl
 
-COPY compile.jl .
-RUN julia compile.jl
+# COPY compile.jl .
+# RUN julia compile.jl
 
-COPY add-non-compiled.jl .
-COPY clean-up.jl .
+# COPY add-non-compiled.jl .
+# COPY clean-up.jl .
 
 #RUN julia add-non-compiled.jl
 #RUN 
@@ -128,25 +128,25 @@ COPY clean-up.jl .
 ##########################################################################
 # begin: For production
 # ##########################################################################
-# COPY add-compiled.jl .
-# COPY compile.jl .
-# COPY add-non-compiled.jl .
-# COPY clean-up.jl .
+COPY add-compiled.jl .
+COPY compile.jl .
+COPY add-non-compiled.jl .
+COPY clean-up.jl .
 
-# RUN sudo apt-get update && \
-# 	sudo apt-get install build-essential -y && \
-# 	sudo apt-get install qt5-default -y && \
-#     sudo apt-get install x11-apps xauth -y && \
-#     julia add-compiled.jl &&\
-#     julia compile.jl  && \
-#     julia add-non-compiled.jl && \
-#  	julia clean-up.jl && \
-#  	sudo apt-get remove build-essential -y && \
-#  	sudo apt-get autoremove -y && \
-#  	sudo apt-get clean -y && \ 
-#  	rm -rf $HOME/.local && \
-#     fix-permissions $JULIA_PKGDIR && \
-#     fix-permissions $JULIA_PKGDIR $CONDA_DIR/share/jupyter
+RUN sudo apt-get update && \
+	sudo apt-get install build-essential -y && \
+	sudo apt-get install qt5-default -y && \
+    sudo apt-get install x11-apps xauth -y && \
+    julia add-compiled.jl &&\
+    julia compile.jl  && \
+    julia add-non-compiled.jl && \
+ 	julia clean-up.jl && \
+ 	sudo apt-get remove build-essential -y && \
+ 	sudo apt-get autoremove -y && \
+ 	sudo apt-get clean -y && \ 
+ 	rm -rf $HOME/.local && \
+    fix-permissions $JULIA_PKGDIR && \
+    fix-permissions $JULIA_PKGDIR $CONDA_DIR/share/jupyter
 
 ##########################################################################
 # end: For production

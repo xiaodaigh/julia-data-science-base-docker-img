@@ -2,7 +2,7 @@
 
 using Pkg
 #pkg"add Plots StatsPlots Pipe FstFileFormat Fread"
-pkg"add FstFileFormat Fread"
+pkg"add FstFileFormat Fread Pipe"
 
 # pre compile them Plots and StatsPlots
 #using Plots, StatsPlots, Pipe

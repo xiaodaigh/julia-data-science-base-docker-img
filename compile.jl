@@ -25,7 +25,7 @@ using PackageCompilerX
 	,:JLBoost
 	,:ParquetFiles
  	,:RDatasets
- 	,:Pipe
+# 	,:Pipe
  	,:Plots
  	,:StatsPlots
   	], replace_default = true)
