@@ -1,1 +1,1 @@
-docker build -t zj/julia-try ./
+docker build --rm=false -t zj/julia-try ./
