@@ -1,4 +1,3 @@
-
 using PackageCompilerX
  create_sysimage(
   	[  	 
@@ -25,7 +24,7 @@ using PackageCompilerX
 	,:JLBoost
 	,:ParquetFiles
  	,:RDatasets
-# 	,:Pipe
+# 	,:Pipe #pipe's Pipe will conflict wit Base.Pipe
  	,:Plots
  	,:StatsPlots
   	], replace_default = true)
