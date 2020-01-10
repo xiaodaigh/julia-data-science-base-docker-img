@@ -56,6 +56,8 @@ The below packages are compiled using PackageCompilerX.jl into the image
 | StatsPlots | Plotting |
 | Tables | Data Manipulation/Convenience |  |
 | TableView | Data Viewing |  |
+| XGBoost | Supervised learning |  |
+
 
 
 The below packages are included but not compiled
@@ -63,7 +65,4 @@ The below packages are included but not compiled
 | Package | Type |
 | -- | -- |
 | Pipe | Data Manipulation/Convenience | If compiled into base then there is warning message with Pipe |
-
-### Known packages not working
-
-* XGBoost.jl
+| TableView | Data Viewing | If compiled then doesn't work with JupyterLab |
