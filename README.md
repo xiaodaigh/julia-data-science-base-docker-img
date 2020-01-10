@@ -39,36 +39,33 @@ The below packages are compiled using PackageCompilerX.jl into the image
 
 | Package | Type | Notes | 
 | -- | -- | -- |
+| CategoricalArrays | Foundation |  |
+| Clustering | Unsupervised learning |  |
 | CSV | Data IO | |
-| Feather | Data IO | |
-| JDF | Data IO | For reading/writing JDF files |
-| ParquetFiles | Data IO |  |
+| DataConvenience | Data Manipulation/Convenience |  |
 | DataFrames | Data Manipulation |  |
 | DataFramesMeta | Data Manipulation |  |
-| Tables | Data Manipulation/Convenience |  |
-| Lazy | Data Manipulation/Convenience |  |
-| Pipe | Data Manipulation/Convenience |  |
-| DataConvenience | Data Manipulation/Convenience |  |
+| DecisionTree | Supervised learning |  |
 | FastGroupBy | Data Manipulation/Convenience |  |
-| SortingLab | Data Manipulation/Convenience |  |
-| StatsBase | Foundation/Statistics |  |
+| Feather | Data IO | |
 | FreqTables | Foundation/Statistics |  |
 | GLM | Supervised learning |  |
-| DecisionTree | Supervised learning |  |
+| JDF | Data IO | For reading/writing JDF files |
 | JLBoost | Supervised learning |  |
-| Clustering | Unsupervised learning |  |
-| CategoricalArrays | Foundation |  |
+| Lazy | Data Manipulation/Convenience |  |
 | Missings | Foundation |  |
-| TableView | Data Viewing |  |
+| ParquetFiles | Data IO |  |
+| Plots | Plotting |
+| SortingLab | Data Manipulation/Convenience |  |
+| StatsBase | Foundation/Statistics |  |
+| StatsPlots | Plotting |
+| Tables | Data Manipulation/Convenience |  |
+| XGBoost | Supervised learning |  |
 
 
 The below packages are included but not compiled
 
 | Package | Type |
 | -- | -- |
-| Plots | Plotting |
-| StatsPlots | Plotting |
-
-### Known packages not working
-
-* XGBoost.jl
+| TableView | Data Viewing | If compiled then doesn't work with JupyterLab |
+| Pipe | Data Manipulation/Convenience |  If compiled then conflicts with Julia Base |
