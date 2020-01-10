@@ -59,7 +59,7 @@ The below packages are compiled using PackageCompilerX.jl into the image
 
 The below packages are included but not compiled
 
-| Package | Type |
-| -- | -- |
+| Package | Type | Notes |
+| -- | -- | -- |
 | Pipe | Data Manipulation/Convenience | If compiled into base then there is warning message with Pipe |
 | TableView | Data Viewing | If compiled then doesn't work with JupyterLab |
