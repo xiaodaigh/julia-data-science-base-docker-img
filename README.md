@@ -24,9 +24,6 @@ docker run --rm \
 
 Often one may wish to save the data to somewhere on the hard drive, you may do this by attaching a local folder to the directory `somedir`
 
-
-```
-
 ## Packages
 
 The below packages are compiled using PackageCompilerX.jl into the image
