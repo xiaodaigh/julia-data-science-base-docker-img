@@ -1,15 +1,15 @@
 # Intro
 Julia Data Science Docker with data science packages compiled for instant loading!
 
-Time-to-first-plot (TTFP) is often regarded as one of Julia's main pain points. There are compilation packages to alleviate the pain such as PackageCompiler.jl and more recently PacakgeCompilerX.jl. These compilation packages work by pre-"compiling" the packages and baking them into the julia sysimage so that `using Pkgs` will be fast just like base packages.
+Time-to-first-plot (TTFP) is often regarded as one of Julia's main pain points. There are compilation packages to alleviate the pain such as PackageCompiler.jl. These compilation packages work by pre-"compiling" the packages and baking them into the julia sysimage so that `using Pkgs` will be fast just like base packages.
 
 This is an experimental first attempt at making data science packages used by me into a docker image with pre-compiled data science packages.
 
 ## Usage
 
-Firstly, install Docker to run a Jupyter notebook with Julia installed. If you are running Windows, I recommend installing git so you have access to git bash.
+Firstly, install Docker. If you are running Windows, I recommend installing git so you have access to git bash.
 
-On Windows you IP can be found using `ipconfig` and on Linux with `ifconfig`. This is need if you wish to do plotting from the docker image.
+On Windows you IP can be found using `ipconfig` and on Linux with `ifconfig`. This is needed if you wish to do plotting from the docker image.
 
 
 **Basic: Windows**
@@ -22,11 +22,11 @@ docker run --rm \
 	xiaodaidocker2019/julia-data-science-base
 ```
 
-Often one may wish to save the data to somewhere on the hard drive, you may do this by attaching a local folder to the directory `somedir`
+Often one may wish to save the data to somewhere on the hard drive, you may do this by attaching a local folder to the directory `somedir`.
 
 ## Packages
 
-The below packages are compiled using PackageCompilerX.jl into the image
+The below packages are compiled using PackageCompiler.jl into the image
 
 | Package | Type | Notes | 
 | -- | -- | -- |
