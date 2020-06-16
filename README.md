@@ -27,33 +27,34 @@ Often one may wish to save the data to somewhere on the hard drive, you may do t
 ## Packages
 
 The below packages are compiled using PackageCompiler.jl into the image
-
-| Package           | Type                          | Notes                         |
-|-------------------|-------------------------------|-------------------------------|
-| CategoricalArrays | Foundation                    |                               |
-| Clustering        | Unsupervised learning         |                               |
-| CSV               | Data IO                       |                               |
-| DataConvenience   | Data Manipulation/Convenience |                               |
-| DataFrames        | Data Manipulation             |                               |
-| DataFramesMeta    | Data Manipulation             |                               |
-| DecisionTree      | Supervised learning           |                               |
-| FastGroupBy       | Data Manipulation/Convenience |                               |
-| Feather           | Data IO                       |                               |
-| FreqTables        | Foundation/Statistics         |                               |
-| GLM               | Supervised learning           |                               |
-| JDF               | Data IO                       | For reading/writing JDF files |
-| JLBoost           | Supervised learning           |                               |
-| Lazy              | Data Manipulation/Convenience |                               |
-| Missings          | Foundation                    |                               |
-| ParquetFiles      | Data IO                       |                               |
-| Plots             | Plotting                      |                               |
-| RDatasets         | Data                          |                               |
-| SortingLab        | Data Manipulation/Convenience |                               |
-| StatsBase         | Foundation/Statistics         |                               |
-| StatsPlots        | Plotting                      |                               |
-| Tables            | Data Manipulation/Convenience |                               |
-| TableView         | Data Viewing                  |                               |
-| XGBoost           | Supervised learning           |                               |
+|                     |                                 |                                            |
+|---------------------|---------------------------------|--------------------------------------------|
+| Package             | Type                            | Notes                                      |
+| ------------------- | ------------------------------- | -------------------------------            |
+| CategoricalArrays   | Foundation                      |                                            |
+| Clustering          | Unsupervised learning           |                                            |
+| CSV                 | Data IO                         |                                            |
+| DataConvenience     | Data Manipulation/Convenience   |                                            |
+| DataFrames          | Data Manipulation               |                                            |
+| DataFramesMeta      | Data Manipulation               |                                            |
+| DecisionTree        | Supervised learning             |                                            |
+| FastGroupBy         | Data Manipulation/Convenience   |                                            |
+| Feather             | Data IO                         |                                            |
+| FreqTables          | Foundation/Statistics           |                                            |
+| GLM                 | Supervised learning             |                                            |
+| JDF                 | Data IO                         | For reading/writing JDF files              |
+| JLBoost             | Supervised learning             |                                            |
+| Lazy                | Data Manipulation/Convenience   |                                            |
+| Missings            | Foundation                      |                                            |
+| Parquet             | Data IO                         | ParquetFiles is quite broken at the moment |
+| Plots               | Plotting                        |                                            |
+| RDatasets           | Data                            |                                            |
+| SortingLab          | Data Manipulation/Convenience   |                                            |
+| StatsBase           | Foundation/Statistics           |                                            |
+| StatsPlots          | Plotting                        |                                            |
+| Tables              | Data Manipulation/Convenience   |                                            |
+| TableView           | Data Viewing                    |                                            |
+| XGBoost             | Supervised learning             |                                            |
 
 
 The below packages are included but not compiled
