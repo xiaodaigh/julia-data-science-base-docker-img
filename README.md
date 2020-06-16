@@ -1,7 +1,7 @@
 # Intro
 Julia Data Science Docker with data science packages compiled for instant loading!
 
-Time-to-first-plot (TTFP) is often regarded as one of Julia's main pain points. There are compilation packages to alleviate the pain such as PackageCompiler.jl. These compilation packages work by pre-"compiling" the packages and baking them into the julia sysimage so that `using Pkgs` will be fast just like base packages.
+Time-to-first-plot (TTFP) is often regarded as one of Julia's main pain points. The PackageCompiler.jl package can compile these package and alleviate the pain. It works by pre-"compiling" the packages and baking them into the julia sysimage so that `using Pkg1` will be fast just like base packages.
 
 This is an experimental first attempt at making data science packages used by me into a docker image with pre-compiled data science packages.
 
@@ -28,33 +28,32 @@ Often one may wish to save the data to somewhere on the hard drive, you may do t
 
 The below packages are compiled using PackageCompiler.jl into the image
 
-| Package | Type | Notes | 
-| -- | -- | -- |
-| CategoricalArrays | Foundation |  |
-| Clustering | Unsupervised learning |  |
-| CSV | Data IO | |
-| DataConvenience | Data Manipulation/Convenience |  |
-| DataFrames | Data Manipulation |  |
-| DataFramesMeta | Data Manipulation |  |
-| DecisionTree | Supervised learning |  |
-| FastGroupBy | Data Manipulation/Convenience |  |
-| Feather | Data IO | |
-| FreqTables | Foundation/Statistics |  |
-| GLM | Supervised learning |  |
-| JDF | Data IO | For reading/writing JDF files |
-| JLBoost | Supervised learning |  |
-| Lazy | Data Manipulation/Convenience |  |
-| Missings | Foundation |  |
-| ParquetFiles | Data IO |  |
-| Plots | Plotting |
-| RDatasets | Data |
-| SortingLab | Data Manipulation/Convenience |  |
-| StatsBase | Foundation/Statistics |  |
-| StatsPlots | Plotting |
-| Tables | Data Manipulation/Convenience |  |
-| TableView | Data Viewing |  |
-| XGBoost | Supervised learning |  |
-
+| Package           | Type                          | Notes                         |
+|-------------------|-------------------------------|-------------------------------|
+| CategoricalArrays | Foundation                    |                               |
+| Clustering        | Unsupervised learning         |                               |
+| CSV               | Data IO                       |                               |
+| DataConvenience   | Data Manipulation/Convenience |                               |
+| DataFrames        | Data Manipulation             |                               |
+| DataFramesMeta    | Data Manipulation             |                               |
+| DecisionTree      | Supervised learning           |                               |
+| FastGroupBy       | Data Manipulation/Convenience |                               |
+| Feather           | Data IO                       |                               |
+| FreqTables        | Foundation/Statistics         |                               |
+| GLM               | Supervised learning           |                               |
+| JDF               | Data IO                       | For reading/writing JDF files |
+| JLBoost           | Supervised learning           |                               |
+| Lazy              | Data Manipulation/Convenience |                               |
+| Missings          | Foundation                    |                               |
+| ParquetFiles      | Data IO                       |                               |
+| Plots             | Plotting                      |                               |
+| RDatasets         | Data                          |                               |
+| SortingLab        | Data Manipulation/Convenience |                               |
+| StatsBase         | Foundation/Statistics         |                               |
+| StatsPlots        | Plotting                      |                               |
+| Tables            | Data Manipulation/Convenience |                               |
+| TableView         | Data Viewing                  |                               |
+| XGBoost           | Supervised learning           |                               |
 
 
 The below packages are included but not compiled
