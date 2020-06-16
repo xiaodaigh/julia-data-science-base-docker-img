@@ -22,7 +22,7 @@ using PackageCompilerX
 	,:GLM
 	,:JDF
 	,:JLBoost
-	,:ParquetFiles
+	,:Parquet
  	,:RDatasets
 # 	,:Pipe #pipe's Pipe will conflict wit Base.Pipe
  	,:Plots
