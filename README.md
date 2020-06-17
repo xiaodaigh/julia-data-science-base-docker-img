@@ -27,7 +27,7 @@ Often one may wish to save the data to somewhere on the hard drive, you may do t
 ## Packages
 
 The below packages are compiled using PackageCompiler.jl into the image
-|---------------------|---------------------------------|--------------------------------------------|
+
 | Package             | Type                            | Notes                                      |
 | ------------------- | ------------------------------- | -------------------------------            |
 | CategoricalArrays   | Foundation                      |                                            |
