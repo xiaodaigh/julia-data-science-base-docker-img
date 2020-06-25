@@ -1,4 +1,4 @@
-using PackageCompilerX
+using PackageCompiler
  create_sysimage(
   	[  	 
   	# foundation packages; these needs to be placed first
@@ -8,7 +8,6 @@ using PackageCompilerX
   	,:CategoricalArrays
   	,:DataFrames
   	,:SortingLab
-
   	# additional packages
   	,:Lazy
     ,:Clustering  	
