@@ -1,5 +1,5 @@
 using Pkg
 pkg"add XGBoost"
 
-using PackageCompilerX
+using PackageCompiler
 create_sysimage([:XGBoost], replace_default = true)
