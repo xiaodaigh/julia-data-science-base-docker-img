@@ -15,12 +15,13 @@ using PackageCompiler
 	,:DataFramesMeta
 	,:DecisionTree	
 	,:FastGroupBy
-	,:Feather
-	,:FileIO
+	,:Feather	
 	,:FreqTables	
 	,:GLM
 	,:JDF
 	,:JLBoost
+	,:JLBoostMLJ
+	,:MLJ
 	,:Parquet
  	,:RDatasets
 # 	,:Pipe #pipe's Pipe will conflict wit Base.Pipe
