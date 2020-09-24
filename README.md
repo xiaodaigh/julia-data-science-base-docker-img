@@ -1,3 +1,6 @@
+# There is a now a better way to do this with PackageCompiler.jl
+
+
 # Intro
 Julia Data Science Docker with data science packages compiled for instant loading!
 
